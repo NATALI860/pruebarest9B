@@ -1,8 +1,9 @@
 const express = require('express')
 const router = express.Router()
+const ejercicioController = require('../controllers/ejercicioController')
 
-router.get('/ejercicios',(req, res)=>{
-    res.json({mensaje:"Hola Mundo "})
-})
+router.get('/ejercicios', ejercicioController.buscarTodo)
+
+
 
 module.exports=router
